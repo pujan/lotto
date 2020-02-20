@@ -7,12 +7,12 @@ crontab for example:
 Structure file database 'losowania.db':
 
 Table:
-  losowania (draw)
+  * losowania (draw)
 
 Columns:
-  id_losowania => ID draw result (lotto.pl)
-  data => date
-  liczby => numbers
+  * id_losowania => ID draw result (lotto.pl)
+  * data => date
+  * liczby => numbers
 
 date of first record: 2017-05-25
 
