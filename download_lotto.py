@@ -27,19 +27,17 @@ for row in tbody.find_all('tr'):
         img = col.find('img')
         if img and img.attrs['alt'] == 'Lotto':
             td = img.next_element
-            id_losowania = td.text
+            id_ = td.text
             td = td.next_sibling
-            date = td.text.split(',')[0]
-            d, m, r = date.split('-')
-            date = datetime.date(2000 + int(r), int(m), int(d))
+            date = datetime.datetime.strptime(td.text.split(',')[0], '%d-%m-%y').date()
             td = td.next_sibling
-            div = td.find('div', class_='{}-kolejnosc'.format(id_losowania))
-            liczby = [el.text.strip() for el in div.find_all('div', class_='number')]
-            liczby = ','.join(liczby)
-            print('id: {}, data: {}, liczby: {}'.format(id_losowania, date, liczby))
-            data.append([id_losowania, date, liczby])
+            div = td.find('div', class_='{}-kolejnosc'.format(id_))
+            numbers = [el.text.strip() for el in div.find_all('div', class_='number')]
+            numbers = ','.join(numbers)
+            print('id: {}, date: {}, numbers: {}'.format(id_, date, numbers))
+            data.append([id_, date, numbers])
 
-conn = sqlite3.connect('losowania.db')
+conn = sqlite3.connect('draws.db')
 c = conn.cursor()
 
 for row in data:
