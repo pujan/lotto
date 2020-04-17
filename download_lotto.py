@@ -2,21 +2,20 @@
 # -*- coding: utf-8 -*-
 
 from bs4 import BeautifulSoup
-import urllib.request
+import requests
 import datetime
 import sqlite3
 
 print('-- START: {} --'.format(datetime.datetime.now()))
 
-url = "http://www.lotto.pl/lotto/wyniki-i-wygrane/ostatnie-wyniki"
-data = urllib.request.urlopen(url)
+url = 'http://www.lotto.pl/lotto/wyniki-i-wygrane/ostatnie-wyniki'
+data = requests.get(url)
 
-if data.status != 200:
+if data.status_code != 200:
     print('status:', data.status)
     exit()
 
-charset = data.getheader('Content-Type').split('=')[1]
-content = data.read().decode(charset, 'ignore')
+content = data.text
 soup = BeautifulSoup(content, "html.parser")
 data = []
 table = soup.find('table', attrs={'class': 'ostatnie-wyniki-table'})
