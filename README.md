@@ -4,9 +4,9 @@ New version, because page lotto.pl is updated. Now usage API www.lotto.pl/api.
 
 Script get three games results from one request:
 
-    * Lotto
-    * LottoPlus
-    * SuperSzansa
+* Lotto
+* LottoPlus
+* SuperSzansa
 
 
 crontab for example:
@@ -16,15 +16,16 @@ crontab for example:
 
 ## Options for script
 
-    * --game - games kind (only Lotto is default)
-    * --size-result - count results on page
-    * --page - page number of result
-    * --db-file - path to DB exists file
+* --game - games kind (only Lotto is default)
+* --size-result - count results on page
+* --page - page number of result
+* --db-file - path to DB exists file
 
 
 Options not implemented yet:
-    * --id-draw select draw from System Lotto ID
-    * --date-draw select draw from Date
+
+* --id-draw select draw from System Lotto ID
+* --date-draw select draw from Date
 
 ### Runing script
 
