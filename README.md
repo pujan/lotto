@@ -34,7 +34,7 @@ Get 30 records first
 python3 download_lotto.py --db-file ~/file.db --page 1 --size-result 30
 ```
 
-`--page 2` get next 30 records, etc.
+`--page 2` get previous 30 records, etc.
 
 ## Structure file database in lotto_draws.db3.sql
 
