@@ -33,19 +33,19 @@ def argv():
 URL_GAMETYPE_FMT = 'https://www.lotto.pl/api/lotteries/draw-results/by-gametype?game={game}&index={page}&size={size}' \
     '&sort=drawDate&order=DESC'
 HEADERS = {
-  'authority': 'www.lotto.pl',
-  'pragma': 'no-cache',
-  'cache-control': 'no-cache',
-  'sec-ch-ua': '"\\Not\"A;Brand";v="99", "Chromium";v="84"',
-  'accept': 'application/json, text/plain, */*',
-  'sec-ch-ua-mobile': '?0',
-  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.56'
-  'Safari/537.36 OPR/70.0.3728.8',
-  'sec-fetch-site': 'same-origin',
-  'sec-fetch-mode': 'cors',
-  'sec-fetch-dest': 'empty',
-  'referer': 'https://www.lotto.pl/lotto/wyniki-i-wygrane',
-  'accept-language': 'pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7'}
+    'authority': 'www.lotto.pl',
+    'pragma': 'no-cache',
+    'cache-control': 'no-cache',
+    'sec-ch-ua': '"\\Not\"A;Brand";v="99", "Chromium";v="84"',
+    'accept': 'application/json, text/plain, */*',
+    'sec-ch-ua-mobile': '?0',
+    'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.56'
+    'Safari/537.36 OPR/70.0.3728.8',
+    'sec-fetch-site': 'same-origin',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-dest': 'empty',
+    'referer': 'https://www.lotto.pl/lotto/wyniki-i-wygrane',
+    'accept-language': 'pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7'}
 
 
 def download(url):
