@@ -1,4 +1,4 @@
-## The Scraper website lotto.pl (my private project :)).
+## The Scraper website (API) lotto.pl (my private project :)).
 
 New version, because page lotto.pl is updated. Now usage the API https://www.lotto.pl/api.
 
